@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <title>Waste Collector Registration</title>
+ <style>
+  #select-all-btn,
+  #select-all-btn2,
+  #select-all-btn3 {
+   background-color: #e0f7fa;
+   color: #00796b;
+   padding: 10px 20px;
+   border: 2px solid #00796b;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.2s;
+   margin-bottom: 25px;
+   display: block;
+  }
+
+  #select-all-btn:hover,
+  #select-all-btn2:hover,
+  #select-all-btn3:hover {
+   background-color: #ffffff;
+   color: #00796b;
+  }
+
+  #select-all-btn2 {
+   background-color: #ffe2ac;
+   color: #835500;
+  }
+
+  #select-all-btn3 {
+   background-color: #efacff;
+   color: #560083;
+  }
+
+ </style>
+
+</head>
+
+<body class="">
+
+ <button id="select-all-btn" onclick="selectAll()">Select All & Copy</button>
+
+	<table class="content" role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color:#E6F4E6; padding:30px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;border-radius:12px;">
+		<tr>
+			<td align="center">
+			<a href="https://junksaway.co.uk/" target="_blank"><img src="https://res.cloudinary.com/duqtyqkry/image/upload/v1736264163/laurencedavis/junksaway/logo_wnlnqe.png" width="110" alt="" style="padding-bottom: 20px;"></a>
+				<table role="presentation" width="" max-width="600" cellspacing="0" cellpadding="0" style="max-width: 600px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;;background:#ffffff; border-radius:12px; padding:30px;text-align:center;">
+					<tr>
+						<td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:24px; font-weight:bold; color:#1d1d1f; padding-bottom:10px;text-align:center;">
+							Waste Collector Registration
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:16px; color:#555; line-height:1.5; padding-bottom:15px;text-align:center;">
+							Thank you for working with <a href="https://junksaway.co.uk/" target="_blank" style="color: #4FCE5D;text-decoration: none!Important;">JunksAway.co.uk</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:16px; color:#555; line-height:1.5; padding-bottom:15px;text-align:center;">
+							We now require some documents, so we can register your details as one of our <span style="display: inline-block;"><b>Trusted Licensed Waste Collectors</b></span>.
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:16px; color:#555; line-height:1.5; padding-bottom:20px;text-align:center;">
+							Please submit the required documents using the link below.
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="text-align:center;">
+							<a href="https://forms.gle/zi8UMcNahBKT38Jq6" target="_blank" style="display:inline-block; background-color:#4FCE5D; color:#ffffff; font-size:16px; font-weight:bold; text-decoration:none; padding:12px 24px; border-radius:8px;text-align:center;">
+								Submit Documents
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size:12px; color:#8e8e93; padding-top:20px;text-align:center;">
+							If you have any questions, feel free to reply to this email.
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	
+ <script>
+  function selectAll() {
+   // Create a range object to select text
+   const range = document.createRange();
+   const selection = window.getSelection();
+
+   // Select the entire content excluding the button
+   const content = document.querySelector('.content');
+   range.selectNodeContents(content);
+   selection.removeAllRanges();
+   selection.addRange(range);
+
+   // Execute the 'copy' command to copy the selected text to the clipboard
+   try {
+    document.execCommand('copy');
+    alert('Signature copied to clipboard!');
+   } catch (err) {
+    console.error('Unable to copy', err);
+   }
+  }
+
+
+ </script>
+</body>
+
+</html>
